@@ -1,9 +1,16 @@
 
 public class Soil {
-	double m_fertility = 100;
-	int m_stock = 0;
+	double m_fertility;
+	int m_stock;
 	Wheat m_wheat;
 	Grass m_grass;
+	
+	public Soil() {
+		m_fertility = 100;
+		m_stock = 0;
+		m_wheat = new Wheat();
+		m_grass = new Grass();
+	}
 	
 	public double getFertility() {
 		return m_fertility;
@@ -56,7 +63,36 @@ public class Soil {
 		m_wheat.changeProduction(productionChange);
 	}
 	
-	// TODO : Grass , same stuff
+	public boolean getGrassExists() {
+		return m_grass.getExists();
+	}
 	
+	public void setGrassExists(boolean exists) {
+		m_grass.setExists(exists);
+	}
+	
+	public double getGrassGrowth() {
+		return m_grass.getGrowth();
+	}
+	
+	public void setGrassGrowth(double newGrowth) {
+		m_grass.setGrowth(newGrowth);
+	}
+	
+	public int getGrassProduction() {
+		return m_grass.getProduction();
+	}
+	
+	public void setGrassProduction(int prod) {
+		m_grass.setProduction(prod);
+	}
+	
+	public void changeGrassGrowth(double growthChange) {
+		m_grass.changeGrowth(growthChange);
+	}
+	
+	public void changeGrassProduction(int productionChange) {
+		m_grass.changeProduction(productionChange);
+	}	
 
 }
