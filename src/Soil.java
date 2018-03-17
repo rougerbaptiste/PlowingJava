@@ -12,6 +12,9 @@ public class Soil {
 		m_grass = new Grass();
 	}
 	
+	///////
+	// Soil Methods
+	
 	public String getInfosOnSoil() {
 		return "Soil : \n\tFert. : " + m_fertility + "|| Stock : " + m_stock + "\nWheat :\n\t" + m_wheat.getInfoOnWheat() + "\nGrass :\n\t" + m_grass.getInfoOnGrass();
 	}
@@ -34,6 +37,9 @@ public class Soil {
 	public void setStock(int newStock) {
 		m_stock = newStock;
 	}
+	
+	///////
+	// Wheat Methods
 	
 	public boolean getWheatExists() {
 		return m_wheat.getExists();
@@ -66,6 +72,9 @@ public class Soil {
 	public void changeWheatProduction(int productionChange) {
 		m_wheat.changeProduction(productionChange);
 	}
+	
+	///////
+	// Grass Methods
 	
 	public boolean getGrassExists() {
 		return m_grass.getExists();
