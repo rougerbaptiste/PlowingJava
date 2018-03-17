@@ -14,9 +14,26 @@ public class Field {
 		}
 	}
 	
+	///////
+	// Field Methods
+	
 	public int getFieldWidth() {
 		return m_fieldWidth;
 	}
+	
+	public int getFieldHeight() {
+		return m_fieldHeight;
+	}
+	
+	public String getInfoOnSoil(int x, int y) {
+		return "Pos : " + x + ", " + y + " :\n" + m_soils[x][y].getInfosOnSoil();
+	}
+	
+	///////
+	// Soil Methods
+	
+	///////
+	// Wheat Methods
 	
 	public boolean getFieldWheatExists(int x, int y) {
 		return m_soils[x][y].getWheatExists();
@@ -33,5 +50,8 @@ public class Field {
 	public void setFieldWheatGrowth(int x, int y, double newGrowth) {
 		m_soils[x][y].setWheatGrowth(newGrowth);
 	}
+	
+	///////
+	// Grass Methods
 
 }

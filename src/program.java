@@ -17,6 +17,7 @@ public class program {
 		System.out.println("Growth = " + sol.getWheatGrowth());
 		sol.changeWheatGrowth(12);
 		System.out.println("Growth = " + sol.getWheatGrowth());
+		System.out.println(sol.getInfosOnSoil() + "\n===========================\n");
 		
 //		Soil[][] champsTest = new Soil[10][10];
 //		int i = 0, j = 0;
@@ -29,11 +30,13 @@ public class program {
 //		}
 		
 		Field champs = new Field();
-		System.out.println(champs.getFieldWidth());
-		System.out.println(champs.getFieldWheatExists(1, 2));
-		champs.setFieldWheatExists(0, 0, false);
+//		System.out.println(champs.getFieldWidth());
+//		System.out.println(champs.getFieldWheatExists(1, 2));
+		System.out.println(champs.getInfoOnSoil(0, 0));
+		champs.setFieldWheatExists(0, 0, true);
+		System.out.println(champs.getInfoOnSoil(0, 0));
 		champs.setFieldWheatGrowth(0, 0, 45);
-		System.out.println(champs.getFieldWheatExists(0, 0) + " " + champs.getFieldWheatGrowth(0, 0));
+		System.out.println(champs.getInfoOnSoil(0, 0));
 		
 
 	}

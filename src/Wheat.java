@@ -11,6 +11,10 @@ public class Wheat {
 		
 	}
 	
+	public String getInfoOnWheat() {
+		return "Growth : " + m_growth + " || Prod. : " + m_production + " || Exist : " + m_exists;
+	}
+	
 	public double getGrowth() {
 		return m_growth;
 	}

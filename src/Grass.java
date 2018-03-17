@@ -8,6 +8,10 @@ public class Grass {
 		return m_growth;
 	}
 	
+	public String getInfoOnGrass() {
+		return "Growth : " + m_growth + "|| Prod. : " + m_production + "|| Exist : " + m_exists;
+	}
+	
 	public void setGrowth(double growth) {
 		if(m_exists) {
 			m_growth = growth;
