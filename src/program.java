@@ -18,19 +18,22 @@ public class program {
 		sol.changeWheatGrowth(12);
 		System.out.println("Growth = " + sol.getWheatGrowth());
 		
-		Soil[][] champsTest = new Soil[10][10];
-		int i = 0, j = 0;
-		for(Soil rang[] : champsTest) {
-			i = 0;
-			for(Soil sol2 : rang) {
-				j = 0;
-				champsTest[i][j] = new Soil();
-			}
-		}
+//		Soil[][] champsTest = new Soil[10][10];
+//		int i = 0, j = 0;
+//		for(Soil rang[] : champsTest) {
+//			i = 0;
+//			for(Soil sol2 : rang) {
+//				j = 0;
+//				champsTest[i][j] = new Soil();
+//			}
+//		}
 		
 		Field champs = new Field();
 		System.out.println(champs.getFieldWidth());
-		System.out.println(champs.getWheatExists(1, 2));
+		System.out.println(champs.getFieldWheatExists(1, 2));
+		champs.setFieldWheatExists(0, 0, false);
+		champs.setFieldWheatGrowth(0, 0, 45);
+		System.out.println(champs.getFieldWheatExists(0, 0) + " " + champs.getFieldWheatGrowth(0, 0));
 		
 
 	}

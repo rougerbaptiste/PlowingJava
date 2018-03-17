@@ -9,7 +9,9 @@ public class Grass {
 	}
 	
 	public void setGrowth(double growth) {
-		m_growth = growth;
+		if(m_exists) {
+			m_growth = growth;
+		}
 	}
 	
 	public int getProduction() {
@@ -17,7 +19,9 @@ public class Grass {
 	}
 	
 	public void setProduction(int prod) {
-		m_production = prod;
+		if(m_exists) {
+			m_production = prod;
+		}
 	}
 	
 	public boolean getExists() {
@@ -29,14 +33,18 @@ public class Grass {
 	}
 	
 	public void changeGrowth(double growthChange) {
-		m_growth += growthChange;
+		if(m_exists) {
+			m_growth += growthChange;
+		}
 		if(m_growth > 100) {
 			m_growth = 100;
 		}
 	}
 	
 	public void changeProduction(int productionChange) {
-		m_production += productionChange;
+		if(m_exists) {
+			m_production += productionChange;
+		}
 	}
 
 }

@@ -18,8 +18,20 @@ public class Field {
 		return m_fieldWidth;
 	}
 	
-	public boolean getWheatExists(int x, int y) {
+	public boolean getFieldWheatExists(int x, int y) {
 		return m_soils[x][y].getWheatExists();
+	}
+	
+	public void setFieldWheatExists(int x, int y, boolean exists) {
+		m_soils[x][y].setWheatExists(exists);
+	}
+	
+	public double getFieldWheatGrowth(int x, int y) {
+		return m_soils[x][y].getWheatGrowth();
+	}
+	
+	public void setFieldWheatGrowth(int x, int y, double newGrowth) {
+		m_soils[x][y].setWheatGrowth(newGrowth);
 	}
 
 }
