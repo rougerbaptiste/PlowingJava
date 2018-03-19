@@ -1,7 +1,7 @@
 
-public class program {
+public class main {
 
-	public static void main(final String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hellow boyos");
 		
@@ -37,7 +37,6 @@ public class program {
 		System.out.println(champs.getInfoOnSoil(0, 0));
 		champs.setFieldWheatGrowth(0, 0, 45);
 		System.out.println(champs.getInfoOnSoil(0, 0));
-		
 
 	}
 

@@ -28,6 +28,9 @@ public class Soil {
 		if(m_fertility < 0) {
 			m_fertility = 0;
 		}
+		if(m_fertility > 100) {
+			m_fertility = 100;
+		}
 	}
 	
 	public int getStock() {
@@ -106,6 +109,6 @@ public class Soil {
 	
 	public void changeGrassProduction(int productionChange) {
 		m_grass.changeProduction(productionChange);
-	}	
+	}
 
 }
